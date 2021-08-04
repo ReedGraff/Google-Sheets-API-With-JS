@@ -1,6 +1,15 @@
 # Google-Sheets-API-With-JS
 This is a very simple guide that shows how to make a google sheets endpoint with JS. Once the endpoint is made, I show how to scrape the data from the endpoint and paste them into an HTML file.
 
+**Reference**
+1. The current setup is built off of this google sheet: https://docs.google.com/spreadsheets/d/10JoLUmML09fkz1ViFljMmk-pxZO5p785or6O4wTWiO0/edit?usp=sharing
+
+**Out of Box Usage**
+1. Download this repository's zip file
+2. Extract all files
+3. Host the index.html pge however you would like. If you are using VScode, use the "Live Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
+4. You are done!
+
 **INSTRUCTIONS**
 1. **Google Sheets Endpoint**
   2. Open a Google sheets
