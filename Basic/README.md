@@ -16,7 +16,7 @@ This is a very simple guide that shows how to make a google sheets endpoint with
 12. **JavaScript Scraping**
   13. Open the "main.js" file, and replace "ENDPOINT" with the JSON endpoint URL you made in step 10
 14. **HTML Live Server**
-  15. Open up your HTML file on a server... If you are using VScode, use the "Liver Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
+  15. Open up your HTML file on a server... If you are using VScode, use the "Live Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
   16. Once a live server is up, open up the inspector (inspect element), and open the "console" tab.
   17. Click the drop-down on "object"
   18. This is all of the data that has been scraped from the google sheet... The cells will likely be under "Object", "feed", and "entry"
