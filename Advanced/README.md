@@ -14,15 +14,15 @@ This is a very simple guide that shows how to make a google sheets endpoint with
   10. In the new link, replace "SHEETCODE" with your sheet code, and "PAGENUMBER" with whatever page number you would like (just type 1 if there is only one page)... 
   11. You now have a JSON endpoint through Google sheets! (I recommend using a Chrome extension to make the data look a lot more aesthetically pleasing (I use "JSON Formatter" by callumlocke.co.uk : https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en))
 12. **JavaScript Scraping**
-  13. Open the "main.js" file, and replace "ENDPOINT" with the JSON endpoint URL you made in step 10
+  13. Open the "main.js" file, and replace the current json endpoint with your own!
 14. **HTML Live Server**
-  15. Open up your HTML file on a server... If you are using VScode, use the "Liver Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
+  15. Open up your HTML file on a server... If you are using VScode, use the "Live Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
   16. Once a live server is up, open up the inspector (inspect element), and open the "console" tab.
   17. Click the drop-down on "object"
   18. This is all of the data that has been scraped from the google sheet... The cells will likely be under "Object", "feed", and "entry"
   19. Find the element that you would like to show in HTML, highlight it, and right-click. Then copy the property path.
 20. **JavaScript Value Setting**
-  21. Replace "PROPERTYPATH" in "main.js" with the property path you copied in step 19
+  21. Replace items in your google sheet as you please!
 
   YOU ARE DONE! Update the page in your web browser, and it should now show the value that you selected from the google sheets JSON endpoint. Instead of showing "Not working yet". 
   
