@@ -45,7 +45,7 @@ fetch("https://spreadsheets.google.com/feeds/cells/10JoLUmML09fkz1ViFljMmk-pxZO5
             var Author = Posts[num].Author
             var AuthorEmail = Posts[num].AuthorEmail
 
-            var added_post = "<div style='background-color:#" + HexadecimalColor + ";'>" + Title + "<br>" + SubTitle + "<br><strong>" + Content + "</strong></div>"
+            var added_post = "<div style='background-color:#" + HexadecimalColor + ";'>" + Title + "<br>" + SubTitle + "<br><strong>" + Content + "</strong><a href='template.html?" + Current_Identifier + "'>ClickMe</a></div>"
 
             document.querySelector("#posts").innerHTML += added_post
         }       
