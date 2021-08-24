@@ -4,6 +4,8 @@ This is a working example of a Google Scripts API...
 3. Navigate to this directory. 
 4. Launch the index.html file in a server or on a local host...
 
+
+
 <img src="chrome console log.png" alt="chrome console log" style="height: 100px; width:100px;"/>
 
 <img src="html table.png" alt="html table" style="height: 100px; width:100px;"/>
