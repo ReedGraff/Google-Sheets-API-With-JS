@@ -1,29 +1,31 @@
 # Google-Sheets-API-With-JS
-This is a very simple guide that shows how to make a google sheets endpoint with JS. Once the endpoint is made, I show how to scrape the data from the endpoint and paste them into an HTML file.
+This is a very simple guide that shows how to make a google sheets endpoint with JS. Once the endpoint is made, I show how to scrape the data from the endpoint and push it into an HTML file.
 
 **INSTRUCTIONS**
-1. **Google Sheets Endpoint**
-  2. Open a Google sheets
-  3. Create a new spreadsheet (or use a pre-existing one)
-  4. Fill the spreadsheet with data (for example, use the file titled: "Data.xlsx")
-  5. Publish to the web (File --> Publish to the web) (Entire document, Web page)
-  6. Once published, press the share button (typically found at the top right-hand corner of the screen (in Google Docs))
-  7. Copy and paste the link into a new tab
-  8. From that link, copy the sheet code. (It will typically come after a "/d/", and it will typically end right before a "/edit")
-  9. Now, copy and paste this link into a new tab: "https://spreadsheets.google.com/feeds/cells/SHEETCODE/PAGENUMBER/public/full?alt=json".
-  10. In the new link, replace "SHEETCODE" with your sheet code, and "PAGENUMBER" with whatever page number you would like (just type 1 if there is only one page)... 
-  11. You now have a JSON endpoint through Google sheets! (I recommend using a Chrome extension to make the data look a lot more aesthetically pleasing (I use "JSON Formatter" by callumlocke.co.uk : https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en))
-12. **JavaScript Scraping**
-  13. Open the "main.js" file, and replace "ENDPOINT" with the JSON endpoint URL you made in step 10
-14. **HTML Live Server**
-  15. Open up your HTML file on a server... If you are using VScode, use the "Live Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
-  16. Once a live server is up, open up the inspector (inspect element), and open the "console" tab.
-  17. Click the drop-down on "object"
-  18. This is all of the data that has been scraped from the google sheet... The cells will likely be under "Object", "feed", and "entry"
-  19. Find the element that you would like to show in HTML, highlight it, and right-click. Then copy the property path.
-20. **JavaScript Value Setting**
-  21. Replace "PROPERTYPATH" in "main.js" with the property path you copied in step 19
+**Google Sheets Script Endpoint**
 
-  YOU ARE DONE! Update the page in your web browser, and it should now show the value that you selected from the google sheets JSON endpoint. Instead of showing "Not working yet". 
-  
-  Have Fun!
+  1. Open a Google sheets
+  2. Create a new spreadsheet (or use a pre-existing one)
+  3. Fill the spreadsheet with data (for example, use the file titled: "Data.xlsx", or this google sheet: https://docs.google.com/spreadsheets/d/1kkxXL23Y8jvfhBSCYTtkC6G2FldEsykl347fA-AQQV8/edit?usp=sharing)
+  4. Once the spreadsheet has data, in the ribbon, press tools > Script Editor.
+  5. Next paste the contents of script.js from this GitHub Repository into your script editor 
+  6. Now change "SHEET NAME" to the actual name of the sheet you want to target... It is most likely going to be "Sheet1"
+  7. Now save the current page.
+  8. Next you want to deploy your sheet using "New Deployment" button.
+  9. Choose web app, and allow anyone to access
+  10. The next page should return a link. You can paste that link into your browser to view the json data.
+  11. You now have a JSON endpoint through Google sheets! (I recommend using a Chrome extension to make the data look a lot more aesthetically pleasing (I use "JSON Formatter" by callumlocke.co.uk : https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en))
+
+**JavaScript Scraping**
+  1. Open the "index.js" file, and replace "SCRIPT API URL" with the JSON endpoint URL you made in step 11
+
+**HTML Live Server**
+  1. Open up your HTML file on a server... If you are using VScode, use the "Live Server" extension, and start the "index.html" file in a live server. If you do not have this extension, there are many other ways to do this, on is with python: 1. Open up the command line or terminal, 2. Type: "python -m http.server" and enter (it should return something like: "Serving HTTP on :: port 8000 (http://[::]:8000/) ...", 3. Go into a web browser and type: "localhost:8000" then find the "index.html" file
+  2. Once a live server is up, open up the inspector (inspect element), and open the "console" tab.
+  3. Click the drop-down on "object"
+  4. This is all of the data that has been scraped from the google sheet... The cells will likely be under data[0].data
+  5. As a tip, if you want to Find the element path that you would like to show in HTML, highlight it in the chrome console, and right-click. Then copy the property path.
+
+
+YOU ARE DONE!
+Have Fun!
