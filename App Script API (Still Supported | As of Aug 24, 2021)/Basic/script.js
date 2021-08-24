@@ -1,6 +1,6 @@
 function doGet() {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
-    const ws = ss.getSheetByName("Sheet1");
+    const ws = ss.getSheetByName("SHEET NAME");
     const data = ws.getRange("A1").getDataRegion().getValues();
   
     const response = [{status: 200, data: data}];
