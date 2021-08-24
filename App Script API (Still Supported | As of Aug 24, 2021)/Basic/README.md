@@ -30,3 +30,7 @@ This is a very simple guide that shows how to make a google sheets endpoint with
 YOU ARE DONE!
 <br>
 Have Fun!
+<br>
+<br>
+<br>
+For Further Reading / Information Reference This great YT Series: https://www.youtube.com/watch?v=yiPnkBEHqf0
